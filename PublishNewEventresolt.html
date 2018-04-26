@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Responsive HTML5 Website Template for Developers | 3rd Wave Media</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Responsive HTML5 Website landing Page for Developers">
+    <meta name="author" content="3rd Wave Media">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <!-- github acitivity css -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
+    
+    <!-- Theme CSS -->  
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+</head> 
+    
+        <script> 
+                                        
+                                        
+                                        
+                                        var inputName = document.getElementById("name").value;
+                                        var inputEname = document.getElementById("Ename").value;
+                                        var inputlocation = document.getElementById("Location").value;
+                                        var inputDescription = document.getElementById("Description").value;
+                                        var inputSdate = document.getElementById("Sdate").value;
+                                        var inputEdate = document.getElementById("Edate").value;
+                                        
+                                       
+                                        
+                                        var e = document.getElementById("SHours");
+                                        var strSHours = e.options[e.selectedIndex].text;
+                                        
+                                       var eSM = document.getElementById("SMinute");
+                                        var strSMinute = eSM.options[eSM.selectedIndex].text;
+                                        
+                                        var eEH = document.getElementById("EHours");
+                                        var strEHours = eEH.options[eEH.selectedIndex].text;
+                                        
+                                        var eEM = document.getElementById("EMinute");
+                                        var strEMinute = eEM.options[eEM.selectedIndex].text;
+                                        
+                                        
+                                        if(document.getElementById("Children").checked)
+                                        var inputEChildren = document.getElementById("Children").value;
+                                        else
+                                             var inputEChildren="";
+                                        if(document.getElementById("Adult").checked)
+                                        var inputEAdult = document.getElementById("Adult").value;
+                                        else
+                                            var inputEAdult="";
+                                        if(document.getElementById("Elderly").checked)
+                                        var inputEElderly = document.getElementById("Elderly").value;
+                                        else
+                                            var inputEElderly="";
+                                        
+                                        if(document.getElementById("contactChoice2").checked)
+                                        var inputEcontactChoice3 = document.getElementById("contactChoice2").value;
+                                        else if(document.getElementById("contactChoice1").checked)
+                                        var inputEcontactChoice3 = document.getElementById("contactChoice1").value;
+
+                                localStorage.setItem("name", inputName);
+                                        localStorage.setItem("Ename",inputEname);
+                                        localStorage.setItem("location",inputlocation);
+                                        localStorage.setItem("Description",inputDescription);
+                                        localStorage.setItem("Sdate",inputSdate);
+                                        localStorage.setItem("Edate",inputEdate);
+                                        localStorage.setItem("SHours",strSHours);
+                                        localStorage.setItem("SMinute",strSMinute);
+                                        localStorage.setItem("EHours",strEHours);
+                                        localStorage.setItem("EMinute",strEMinute);
+                                        localStorage.setItem("Children",inputEChildren);
+                                        localStorage.setItem("Adult",inputEAdult);
+                                        localStorage.setItem("Elderly",inputEElderly);
+                                        localStorage.setItem("EcontactChoice3",inputEcontactChoice3);
+        
+              
+
+                                    
+                                     </script>
+    
+
+
+<body onload="load()">
+    <!-- ******HEADER****** --> 
+    <header class="header">
+        <div class="container">                       
+            <img class="profile-image img-responsive pull-left" src="assets/images/profile.png" alt="Nada Alkhateeb" />
+            <div class="profile-content pull-left">
+                <h1 class="name">Nada Alkhateeb</h1>
+                <h2 class="desc">Computer Science Student</h2>   
+                <ul class="social list-inline">
+                    <li><a href="https://twitter.com/nada_Mohammad1?lang=ar"><i class="fa fa-twitter"></i></a></li>                   
+                    <li><a href="https://github.com/Nada1415/csc440"><i class="fa fa-github-alt"></i></a></li> 
+                    <li><a href="HomePage.html"><i class="fa fa-home"></i></a></li>                 
+                </ul> 
+            </div><!--//profile-->             
+        </div><!--//container-->
+    </header><!--//header-->
+    
+    <div class="container sections-wrapper">
+        <div class="row">
+            <div class="primary col-md-8 col-sm-12 col-xs-12">
+                <section class="about section">
+                    <div class="section-inner">
+                        <h2 class="heading">Your Event</h2>
+                        
+                        <td>
+                           
+                           <script>
+                              
+                               
+                             
+                               
+                            document.write('<span id="jstext">Your Name: &nbsp'+localStorage.name+'<span>');
+                               document.write("<br>");
+                            document.write('<span id="jstext">Event Name: &nbsp'+localStorage.Ename+'<span>');
+                               document.write("<br>");
+                            document.write('<span id="jstext">Event Location: &nbsp'+localStorage.location+'<span>');
+                               document.write("<br>");
+                            document.write('<span id="jstext">\n Event Description: &nbsp'+localStorage.Description+'<span>');
+                               document.write("<br>");
+                            document.write('<span id="jstext"> Start On: &nbsp'+localStorage.Sdate+'<p>');
+                               document.write('<span id="jstext"> Time: &nbsp'+localStorage.SHours+'<span>');
+                               document.write('<span id="jstext">:'+localStorage.SMinute+'<span>');
+                               document.write("<br>");
+                            document.write('<span id="jstext">End On: &nbsp'+localStorage.Edate+'<span>');
+                               document.write("<br>");
+                               document.write('<span id="jstext"> Time: &nbsp'+localStorage.EHours+'<span>');
+                               document.write('<span id="jstext">:'+localStorage.EMinute+'<span>');
+                               document.write("<br>");
+                               document.write('<span id="jstext">Event Type: &nbsp'+localStorage.EcontactChoice3+'<span>');
+                               
+                               document.write("<br>");
+                               
+                              
+                               document.write('<span id="jstext">Event Audience: &nbsp'+localStorage.Children+'<span>');
+                               document.write('<span id="jstext">'+localStorage.Adult+'<span>'); 
+                               document.write('<span id="jstext">'+localStorage.Elderly+'<span>');
+                               
+                               
+                               
+                                   
+                                   
+
+
+ 
+</script>
+                                      
+               
+                            
+                            </td>
+
+           <!--   var storedValue = localStorage.getItem("name"); 
+var storedValue = localStorage.getItem("name");
+var storedValue = localStorage.getItem("name");
+var storedValue = localStorage.getItem("name");  -->        
+                    </div><!--//section-inner-->                 
+                </section><!--//section-->
+            </div><!--//primary-->
+            <div class="secondary col-md-4 col-sm-12 col-xs-12">
+                 <aside class="info aside section">
+                    <div class="section-inner">
+                        <h2 class="heading sr-only">Basic Information</h2>
+                        <div class="content">
+                            <ul class="list-unstyled">
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Riyadh, Saudi Arabia</li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span>N94.eye@gmail.com</li>
+                                
+                            </ul>
+                        </div><!--//content-->  
+                    </div><!--//section-inner-->                 
+                </aside><!--//aside-->
+
+            </div><!--//secondary-->    
+        </div><!--//row-->
+    </div><!--//masonry-->
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
+    <script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script> 
+
+    <!-- github activity plugin -->
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+    <!-- custom js -->
+    <script type="text/javascript" src="assets/js/main.js"></script> 
+    
+ 
+    
+</body>
+    
+  
+    
+    
+</html> 
+
